@@ -5,15 +5,15 @@ namespace gherkin {
 namespace detail {
 
 template <
-    template <typename> class Container,
-    template <typename> class Other,
+    template <typename ...> class Container,
+    template <typename ...> class Other,
     typename T
 >
 std::is_same<Container<T>, Other<T>>
 test_is_container(Other<T>*);
 
 template <
-    template <typename> class Container,
+    template <typename ...> class Container,
     typename T
 >
 std::false_type test_is_container(T*);
@@ -21,7 +21,7 @@ std::false_type test_is_container(T*);
 } // namespace detail
 
 template <
-    template <typename> class C,
+    template <typename ...> class C,
     typename T
 >
 using is_container = decltype(
@@ -29,7 +29,7 @@ using is_container = decltype(
 );
 
 template <
-    template <typename> class C,
+    template <typename ...> class C,
     typename T
 >
 inline

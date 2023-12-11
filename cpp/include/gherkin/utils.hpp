@@ -4,6 +4,7 @@
 #include <string>
 #include <string_view>
 #include <regex>
+#include <locale>
 
 namespace gherkin {
 

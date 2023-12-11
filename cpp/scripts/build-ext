@@ -35,7 +35,6 @@ done
 #
 ###############################################################################
 BUILDROOT=$MYDIR/build/root
-# Why do we override these?
 CC=
 CFLAGS=
 CXX=
